@@ -9,11 +9,6 @@
 
 	"packageRules": [
 		{
-			"matchManagers": [ "regex" ],
-			"matchPackageNames": [ "actions/setup-python", "python", "python-version" ],
-			"enabled": false
-		},
-		{
 			"matchPackagePatterns": [ "*" ],
 			"groupName": "all dependencies",
 			"groupSlug": "all-deps",
@@ -22,20 +17,6 @@
 		{
 			"matchManagers": [ "pip", "github-actions" ],
 			"rangeStrategy": "replace"
-		}
-	],
-
-	"customManagers": [
-		{
-			"customType": "regex",
-			"managerFilePatterns": ["/^\\.github/workflows/.*\\.ya?ml$/"],
-			"datasourceTemplate": "github-tags",
-			"depNameTemplate": "actions/setup-python",
-			"versioningTemplate": "pep440",
-			"matchStrings": [
-				"python-version:\\s*(?<currentValue>\\d+\\.\\d+)",
-				"Set up Python\\s+(?<currentValue>\\d+\\.\\d+)"
-			]
 		}
 	],
 

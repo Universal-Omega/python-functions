@@ -9,7 +9,7 @@
 
 	"packageRules": [
 		{
-			"matchPackagePatterns": [ "^(?!python$)" ],
+			"matchPackagePatterns": [ "*" ],
 			"groupName": "all dependencies",
 			"groupSlug": "all-deps",
 			"automerge": true
@@ -17,6 +17,11 @@
 		{
 			"matchManagers": [ "pip", "github-actions" ],
 			"rangeStrategy": "replace"
+		},
+		{
+			"matchManagers": [ "github-actions" ],
+			"matchPackageNames": [ "python", "python-version" ],
+			"enabled": false
 		}
 	],
 

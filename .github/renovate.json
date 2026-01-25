@@ -17,6 +17,10 @@
 		{
 			"matchManagers": [ "pip" ],
 			"rangeStrategy": "replace"
+		},
+		{
+			"matchPackagePatterns": ["^python$"],
+			"enabled": false
 		}
 	],
 

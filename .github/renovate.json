@@ -8,7 +8,8 @@
 			"matchPackagePatterns": [ "*" ],
 			"groupName": "all dependencies",
 			"groupSlug": "all-deps",
-			"automerge": true
+			"automerge": true,
+			"automergeType": "branch"
 		},
 		{
 			"matchManagers": [ "pip", "github-actions" ],

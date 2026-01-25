@@ -1,10 +1,6 @@
 {
 	"extends": [ "config:recommended" ],
 
-	"automerge": true,
-	"automergeType": "pr",
-	"automergeStrategy": "squash",
-
 	"prConcurrentLimit": 1,
 
 	"packageRules": [

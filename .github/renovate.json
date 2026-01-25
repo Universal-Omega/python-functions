@@ -21,6 +21,7 @@
 	],
 
 	"ignoreDeps": [ "python" ],
+	"labels": [ "dependencies" ],
 
 	"pip_requirements": {
 		"fileMatch": [

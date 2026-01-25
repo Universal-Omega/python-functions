@@ -9,14 +9,14 @@
 
 	"packageRules": [
 		{
-			"matchDatasources": [ "python-version" ],
-			"enabled": false
-		},
-		{
 			"matchPackagePatterns": [ "*" ],
 			"groupName": "all dependencies",
 			"groupSlug": "all-deps",
 			"automerge": true
+		},
+		{
+			"matchDatasources": [ "python-version" ],
+			"enabled": false
 		},
 		{
 			"matchManagers": [ "pip", "github-actions" ],
@@ -29,7 +29,8 @@
 			"(^|/)requirements\\.txt$",
 			"(^|/)requirements/.*\\.txt$",
 			"(^|/)\\.github/.*requirements.*\\.txt$",
-			"^\\.github/debci\\.txt$"
+			"^\\.github/debci\\.txt$",
+			"^\\.github/pythonchecks\\.txt$"
 		]
 	}
 }

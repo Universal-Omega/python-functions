@@ -15,14 +15,24 @@
 			"automerge": true
 		},
 		{
-			"matchDatasources": [ "python-version" ],
-			"enabled": false
-		},
-		{
 			"matchManagers": [ "pip", "github-actions" ],
 			"rangeStrategy": "replace"
 		}
 	],
+
+	"customManagers": [
+		{
+			"customType": "regex",
+			"managerFilePatterns": ["/^\\.github/workflows/.*\\.ya?ml$/"],
+			"datasourceTemplate": "github-tags",
+			"depNameTemplate": "actions/setup-python",
+			"versioningTemplate": "pep440",
+			"matchStrings": [
+				"python-version:\\s*(?<currentValue>\\d+\\.\\d+)",
+				"Set up Python\\s+(?<currentValue>\\d+\\.\\d+)"
+			]
+		}
+	]
 
 	"pip_requirements": {
 		"fileMatch": [

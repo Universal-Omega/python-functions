@@ -9,6 +9,11 @@
 
 	"packageRules": [
 		{
+			"matchManagers": [ "github-actions" ],
+			"matchPackageNames": [ "actions/setup-python" ],
+			"ignorePaths": [ "**/python-version" ]
+		},
+		{
 			"matchPackagePatterns": [ "*" ],
 			"groupName": "all dependencies",
 			"groupSlug": "all-deps",
@@ -24,7 +29,8 @@
 		"fileMatch": [
 			"(^|/)requirements\\.txt$",
 			"(^|/)requirements/.*\\.txt$",
-			"(^|/)\\.github/.*requirements.*\\.txt$"
+			"(^|/)\\.github/.*requirements.*\\.txt$",
+			"^\\.github/debci\\.txt$"
 		]
 	}
 }

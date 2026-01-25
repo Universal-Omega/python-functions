@@ -4,9 +4,6 @@
 	"automerge": true,
 	"automergeType": "pr",
 	"automergeStrategy": "squash",
-	"constraints": {
-        "python": "3.13"
-    },
 
 	"prConcurrentLimit": 1,
 
@@ -20,12 +17,10 @@
 		{
 			"matchManagers": [ "pip", "github-actions" ],
 			"rangeStrategy": "replace"
-		},
-		{
-			"matchPackagePatterns": ["^python$"],
-			"enabled": false
 		}
 	],
+
+	"ignoreDeps": [ "python" ],
 
 	"pip_requirements": {
 		"fileMatch": [

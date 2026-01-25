@@ -9,6 +9,11 @@
 
 	"packageRules": [
 		{
+			"matchManagers": [ "regex" ],
+			"matchPackageNames": [ "actions/setup-python", "python", "python-version" ],
+			"enabled": false
+		},
+		{
 			"matchPackagePatterns": [ "*" ],
 			"groupName": "all dependencies",
 			"groupSlug": "all-deps",

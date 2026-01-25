@@ -9,6 +9,10 @@
 
 	"packageRules": [
 		{
+			"matchDatasources": [ "python-version" ],
+			"enabled": false
+		},
+		{
 			"matchPackagePatterns": [ "*" ],
 			"groupName": "all dependencies",
 			"groupSlug": "all-deps",

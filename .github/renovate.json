@@ -15,13 +15,8 @@
 			"automerge": true
 		},
 		{
-			"matchManagers": [ "pip", "github-actions" ],
+			"matchManagers": [ "pip" ],
 			"rangeStrategy": "replace"
-		},
-		{
-			"matchManagers": [ "github-actions" ],
-			"matchPackageNames": [ "python", "python-version" ],
-			"enabled": false
 		}
 	],
 

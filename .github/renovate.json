@@ -20,7 +20,7 @@
 		}
 	],
 
-	"pip": {
+	"pip_requirements": {
 		"fileMatch": [
 			"(^|/)requirements\\.txt$",
 			"(^|/)requirements/.*\\.txt$",

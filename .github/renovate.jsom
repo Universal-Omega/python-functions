@@ -1,0 +1,30 @@
+{
+	"extends": [ "config:recommended" ],
+
+	"automerge": true,
+	"automergeType": "pr",
+	"automergeStrategy": "squash",
+
+	"prConcurrentLimit": 1,
+
+	"packageRules": [
+		{
+			"matchPackagePatterns": [ "*" ],
+			"groupName": "all dependencies",
+			"groupSlug": "all-deps",
+			"automerge": true
+		},
+		{
+			"matchManagers": [ "pip", "github-actions" ],
+			"rangeStrategy": "replace"
+		}
+	],
+
+	"pip": {
+		"fileMatch": [
+			"(^|/)requirements\\.txt$",
+			"(^|/)requirements/.*\\.txt$",
+			"(^|/)\\.github/.*requirements.*\\.txt$"
+		]
+	}
+}

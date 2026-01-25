@@ -9,7 +9,7 @@
 
 	"packageRules": [
 		{
-			"matchPackagePatterns": [ "*" ],
+			"matchPackagePatterns": [ "^(?!python$)" ],
 			"groupName": "all dependencies",
 			"groupSlug": "all-deps",
 			"automerge": true
